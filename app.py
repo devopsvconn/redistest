@@ -1,7 +1,7 @@
 import redis
 
 # Connect to Redis
-r = redis.Redis(host='redis-service.dmsng.svc.cluster.local', port=6379)
+r = redis.Redis(host='redis-headless.dmsng.svc.cluster.local', port=6379)
 
 # Set a key-value pair
 r.set('my_key', 'Hello, Redis!')
