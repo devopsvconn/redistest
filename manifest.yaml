@@ -21,9 +21,15 @@ spec:
         - containerPort: 80  # Assuming your Python application runs on port 8080
         env:
         - name: REDIS_HOST
-          value: redis-service.dmsng.svc.cluster.local
+          value: redis-headless.dmsng.svc.cluster.local
         - name: REDIS_PORT
           value: "6379"
+        - name: REDIS_PASSWORD  # Add environment variable for Redis password
+          valueFrom:
+            secretKeyRef:
+              name: redis  # Name of the secret containing the Redis password
+              key: redis-password
+
 ---
 apiVersion: v1
 kind: Service
