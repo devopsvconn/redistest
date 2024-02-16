@@ -24,11 +24,6 @@ spec:
           value: redis-headless.dmsng.svc.cluster.local
         - name: REDIS_PORT
           value: "6379"
-        - name: REDIS_PASSWORD  # Add environment variable for Redis password
-          valueFrom:
-            secretKeyRef:
-              name: redis  # Name of the secret containing the Redis password
-              key: redis-password
 
 ---
 apiVersion: v1
