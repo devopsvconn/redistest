@@ -21,7 +21,7 @@ spec:
         - containerPort: 80  # Assuming your Python application runs on port 8080
         env:
         - name: REDIS_HOST
-          value: redis-headless.dmsng.svc.cluster.local
+          value: bsg-dm01-q-930672-unilevercom-redis-02.privatelink.redis.cache.windows.net
         - name: REDIS_PORT
           value: "6379"
 
